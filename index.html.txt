@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pr. Mhamed Sayyouri – Site personnel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Pr. Mhamed Sayyouri – ENSA Fès, USMBA. Recherche en traitement du signal et de l'image, vision par ordinateur, intelligence artificielle et optimisation évolutive.">
+  <style>
+    :root{
+      --primary:#1f3c88;
+      --secondary:#f4f4f8;
+      --accent:#8c4ba8;
+      --text:#222;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:#ffffff;
+      line-height:1.6;
+    }
+    a{color:var(--primary);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    header{
+      background:linear-gradient(135deg,var(--primary),#111c40);
+      color:#fff;
+      padding:1rem 1.5rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .nav-container{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .logo-title{
+      font-size:1.1rem;
+      font-weight:bold;
+    }
+    nav ul{
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.8rem;
+      font-size:0.9rem;
+    }
+    nav a{
+      color:#fff;
+      padding:0.3rem 0.6rem;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+    nav a:hover{
+      border-color:#fff;
+    }
+    main{
+      max-width:1100px;
+      margin:1.5rem auto 3rem;
+      padding:0 1rem;
+    }
+    section{
+      margin-bottom:2.5rem;
+    }
+    h1,h2,h3{color:var(--primary);}
+    h1{
+      font-size:2rem;
+      margin-bottom:0.5rem;
+    }
+    h2{
+      font-size:1.4rem;
+      margin-bottom:0.8rem;
+      border-bottom:2px solid var(--secondary);
+      padding-bottom:0.3rem;
+    }
+    h3{font-size:1.05rem;margin-bottom:0.4rem;}
+    .hero{
+      display:grid;
+      grid-template-columns:260px minmax(0,1fr);
+      gap:1.5rem;
+      align-items:center;
+      background:var(--secondary);
+      padding:1.5rem;
+      border-radius:14px;
+    }
+    .hero img{
+      width:100%;
+      max-width:240px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+      object-fit:cover;
+    }
+    .hero-info p{margin-bottom:0.4rem;}
+    .tagline{
+      font-style:italic;
+      margin-top:0.5rem;
+      color:#444;
+    }
+    .chips{
+      margin-top:0.7rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.4rem;
+    }
+    .chip{
+      font-size:0.8rem;
+      padding:0.2rem 0.6rem;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid #ddd;
+    }
+    .two-cols{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.5rem;
+    }
+    ul{margin-left:1.2rem;}
+    li{margin-bottom:0.25rem;}
+    .card{
+      background:#fff;
+      border-radius:12px;
+      padding:1rem;
+      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+    }
+    .pub-list li{
+      margin-bottom:0.6rem;
+      font-size:0.9rem;
+    }
+    .pub-venue{font-style:italic;font-size:0.85rem;}
+    .year-badge{
+      display:inline-block;
+      font-size:0.75rem;
+      padding:0.1rem 0.4rem;
+      border-radius:999px;
+      background:var(--primary);
+      color:#fff;
+      margin-right:0.3rem;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+      gap:1.5rem;
+    }
+    .badge{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:0.15rem 0.5rem;
+      border-radius:999px;
+      font-size:0.75rem;
+      margin-left:0.3rem;
+    }
+    footer{
+      background:#111c40;
+      color:#eee;
+      text-align:center;
+      padding:1rem;
+      font-size:0.8rem;
+    }
+    @media(max-width:720px){
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+      .hero-info{text-align:left;}
+      header{position:static;}
+      .nav-container{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <div class="logo-title">Pr. Mhamed Sayyouri</div>
+    <nav>
+      <ul>
+        <li><a href="#apropos">Accueil</a></li>
+        <li><a href="#interets">Recherche</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#encadrement">Encadrement</a></li>
+        <li><a href="#services">Services scientifiques</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Section Accueil -->
+  <section id="apropos">
+    <div class="hero">
+      <div>
+        <img src="photo-sayyouri.jpg" alt="Pr. Mhamed Sayyouri">
+      </div>
+      <div class="hero-info">
+        <h1>Pr. Mhamed Sayyouri</h1>
+        <p><strong>Professeur habilité</strong>, Département Génie Industriel,<br>
+           <strong>École Nationale des Sciences Appliquées de Fès</strong>, Université Sidi Mohamed Ben Abdellah (USMBA).</p>
+        <p>Professeur associé au laboratoire <strong>ESISA Analytica</strong>, ESISA, Fès.</p>
+        <p class="tagline">
+          Traitement avancé du signal et de l’image, moments orthogonaux discrets,
+          vision par ordinateur et optimisation évolutive pour des applications médicales,
+          industrielles et embarquées.
+        </p>
+        <div class="chips">
+          <span class="chip">Traitement du signal & image 2D/3D</span>
+          <span class="chip">Vision par ordinateur</span>
+          <span class="chip">IA & apprentissage automatique</span>
+          <span class="chip">Optimisation & métaheuristiques</span>
+          <span class="chip">Sécurité multimédia</span>
+          <span class="chip">Systèmes embarqués</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Intérêts & compétences -->
+  <section id="interets">
+    <h2>Axes de recherche & compétences</h2>
+    <div class="two-cols">
+      <div class="card">
+        <h3>Axes de recherche</h3>
+        <ul>
+          <li>Analyse et reconstruction de signaux et d’images par <strong>moments orthogonaux discrets</strong>.</li>
+          <li>Vision par ordinateur / vision industrielle pour la reconnaissance de formes et le contrôle robotique.</li>
+          <li>Sécurisation des données médicales : <strong>compression – cryptage – tatouage/zero-watermarking</strong>.</li>
+          <li>Algorithmes d’optimisation évolutive et chaotiques pour problèmes d’ingénierie réels.</li>
+          <li>Implémentation sur systèmes embarqués (FPGA, cartes embarquées, clusters Raspberry, IoT).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Compétences principales</h3>
+        <ul>
+          <li>Computer vision, traitement d’images 2D/3D/vidéo.</li>
+          <li>IA, apprentissage automatique, science des données.</li>
+          <li>Recherche opérationnelle et optimisation numérique.</li>
+          <li>Conception et modélisation de systèmes industriels.</li>
+          <li>Analyse et conception de systèmes d’information, bases de données.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Publications -->
+  <section id="publications">
+    <h2>Sélection de publications récentes</h2>
+    <p>
+      (Sélection courte – la liste complète des plus de 140 publications est disponible sur vos profils
+      Scopus, ResearchGate, ORCID et DBLP.)
+    </p>
+    <ul class="pub-list">
+      <li>
+        <span class="year-badge">2025</span>
+        Kmich, M., Harrade, I., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
+        «&nbsp;Image Registration Using the Arithmetic Optimization Algorithm for Robotic Visual Servoing&nbsp;»,
+        <span class="pub-venue">International Journal of Computational Intelligence Systems</span>.
+      </li>
+      <li>
+        <span class="year-badge">2025</span>
+        Kmich, M., El Ghouate, N., Bencherqui, A., <strong>Sayyouri, M.</strong>, et al.,
+        «&nbsp;Chaotic Puma Optimizer Algorithm for controlling wheeled mobile robots&nbsp;»,
+        <span class="pub-venue">Engineering Science and Technology, an International Journal</span>.
+      </li>
+      <li>
+        <span class="year-badge">2024</span>
+        Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
+        «&nbsp;An improved reversible watermarking scheme using embedding optimization and quaternion moments&nbsp;»,
+        <span class="pub-venue">Scientific Reports</span>.
+      </li>
+      <li>
+        <span class="year-badge">2024</span>
+        Bencherqui, A., Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
+        «&nbsp;Chaos-enhanced Archimedes algorithm for global optimization of real-world engineering problems and signal feature extraction&nbsp;»,
+        <span class="pub-venue">Processes</span>.
+      </li>
+      <li>
+        <span class="year-badge">2024</span>
+        Bencherqui, A., Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
+        «&nbsp;Optimal algorithm for color medical encryption and compression images based on DNA coding and a hyperchaotic system in the moments&nbsp;»,
+        <span class="pub-venue">Engineering Science and Technology, an International Journal</span>.
+      </li>
+      <li>
+        <span class="year-badge">2023</span>
+        Yamni, M., Daoui, A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
+        «&nbsp;Copyright protection of multiple CT images using Octonion Krawtchouk moments and Grey Wolf optimizer&nbsp;»,
+        <span class="pub-venue">Journal of the Franklin Institute</span>.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section Encadrement -->
+  <section id="encadrement">
+    <h2>Encadrement de thèses</h2>
+    <div class="card">
+      <ul>
+        <li>H. Karmouni – <em>Algorithmes rapides et stables de calcul des moments de Charlier pour l’analyse et la classification des images 2D/3D</em>, soutenue en 2019.</li>
+        <li>T. Jahid – <em>Amélioration des algorithmes d’analyse des images 2D et 3D par les moments de Meixner</em>, 2020.</li>
+        <li>M. Yamni – <em>Analyse des signaux numériques et implémentation sur systèmes embarqués</em>, 2022.</li>
+        <li>A. Daoui – <em>Analyse optimale des signaux par transformées de moments discrets</em>, 2022.</li>
+        <li>O. El Ogri – <em>Analyse et sécurité des signaux/images/vidéos basées sur les moments fractionnaires</em>, 2022.</li>
+        <li>M. A. Tahiri – <em>Transformées moments et IA pour l’analyse et l’implémentation embarquée des signaux numériques</em>, 2023.</li>
+        <li>A. Bencherqui – <em>Analyse avancée des signaux numériques par transformées orthogonales : stabilité, optimisation et implémentation sur cartes embarquées</em>, 2024.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Services -->
+  <section id="services">
+    <h2>Services scientifiques & éditoriaux</h2>
+    <div class="two-cols">
+      <div class="card">
+        <h3>Responsabilités</h3>
+        <ul>
+          <li>Membre du laboratoire <strong>LISA</strong> (Laboratoire d’Ingénierie, Systèmes et Applications).</li>
+          <li>Chef de l’équipe <strong>Automatique, Signaux et Systèmes (EASS)</strong>.</li>
+          <li>Organisation et comités scientifiques de plusieurs conférences (ICDTA, ESAI, CPI, ISCV, etc.).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Activités éditoriales <span class="badge">Éditeur & reviewer</span></h3>
+        <ul>
+          <li>Éditeur académique : <em>International Journal of Digital Multimedia Broadcasting</em>, <em>Advances in Mathematical Physics</em>, <em>The Scientific World Journal</em>.</li>
+          <li>Relecteur pour de nombreuses revues (IEEE Transactions on Image Processing, Pattern Recognition, Expert Systems with Applications, Signal Processing, Sensors, Applied Sciences, etc.).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Coordonnées</h3>
+        <p><strong>ENSA Fès – Université Sidi Mohamed Ben Abdellah</strong></p>
+        <p>BP 72, Avenue My Abdallah km 5, Route d’Imouzzer<br>Fès, Maroc</p>
+        <p>Tél. : +212 6 62 22 46 55 &nbsp; / &nbsp; +212 5 35 61 91 44</p>
+        <p>Email : <a href="mailto:mhamed.sayyouri@usmba.ac.ma">mhamed.sayyouri@usmba.ac.ma</a></p>
+      </div>
+      <div class="card">
+        <h3>Profils scientifiques</h3>
+        <ul>
+          <li>Scopus</li>
+          <li>ResearchGate</li>
+          <li>ORCID</li>
+          <li>DBLP</li>
+        </ul>
+        <p style="font-size:0.85rem;margin-top:0.4rem;">
+          (Ajouter ici les liens cliquables vers vos profils.)
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Pr. Mhamed Sayyouri – ENSA Fès, USMBA. Tous droits réservés.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
