@@ -5,30 +5,31 @@
   <title>Pr. Mhamed Sayyouri – Site personnel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Pr. Mhamed Sayyouri – ENSA Fès, USMBA. Recherche en traitement du signal et de l'image, vision par ordinateur, intelligence artificielle et optimisation évolutive.">
+        content="Pr. Mhamed Sayyouri – ENSA Fès, USMBA. Recherche en traitement du signal et de l'image, vision par ordinateur, IA, optimisation et enseignement.">
   <style>
     :root{
       --primary:#1f3c88;
       --secondary:#f4f4f8;
       --accent:#8c4ba8;
+      --bg:#ffffff;
       --text:#222;
     }
     *{box-sizing:border-box;margin:0;padding:0;}
     body{
       font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
       color:var(--text);
-      background:#ffffff;
       line-height:1.6;
     }
     a{color:var(--primary);text-decoration:none;}
     a:hover{text-decoration:underline;}
     header{
-      background:linear-gradient(135deg,var(--primary),#111c40);
+      background:linear-gradient(135deg,var(--primary),#0c1538);
       color:#fff;
-      padding:1rem 1.5rem;
+      padding:0.8rem 1.2rem;
       position:sticky;
       top:0;
-      z-index:10;
+      z-index:50;
     }
     .nav-container{
       max-width:1100px;
@@ -37,26 +38,29 @@
       align-items:center;
       justify-content:space-between;
       gap:1rem;
+      flex-wrap:wrap;
     }
     .logo-title{
-      font-size:1.1rem;
       font-weight:bold;
+      font-size:1.1rem;
     }
     nav ul{
       list-style:none;
       display:flex;
       flex-wrap:wrap;
-      gap:0.8rem;
+      gap:0.4rem;
       font-size:0.9rem;
     }
     nav a{
       color:#fff;
-      padding:0.3rem 0.6rem;
+      padding:0.25rem 0.6rem;
       border-radius:999px;
       border:1px solid transparent;
+      white-space:nowrap;
     }
     nav a:hover{
       border-color:#fff;
+      background:rgba(255,255,255,0.1);
     }
     main{
       max-width:1100px;
@@ -67,10 +71,7 @@
       margin-bottom:2.5rem;
     }
     h1,h2,h3{color:var(--primary);}
-    h1{
-      font-size:2rem;
-      margin-bottom:0.5rem;
-    }
+    h1{font-size:2rem;margin-bottom:0.4rem;}
     h2{
       font-size:1.4rem;
       margin-bottom:0.8rem;
@@ -81,7 +82,7 @@
     .hero{
       display:grid;
       grid-template-columns:260px minmax(0,1fr);
-      gap:1.5rem;
+      gap:1.6rem;
       align-items:center;
       background:var(--secondary);
       padding:1.5rem;
@@ -91,13 +92,13 @@
       width:100%;
       max-width:240px;
       border-radius:10px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+      box-shadow:0 4px 10px rgba(0,0,0,0.18);
       object-fit:cover;
     }
-    .hero-info p{margin-bottom:0.4rem;}
+    .hero-info p{margin-bottom:0.35rem;}
     .tagline{
+      margin-top:0.6rem;
       font-style:italic;
-      margin-top:0.5rem;
       color:#444;
     }
     .chips{
@@ -116,16 +117,16 @@
     .two-cols{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:1.5rem;
+      gap:1.4rem;
     }
-    ul{margin-left:1.2rem;}
-    li{margin-bottom:0.25rem;}
     .card{
       background:#fff;
       border-radius:12px;
       padding:1rem;
-      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+      box-shadow:0 2px 6px rgba(0,0,0,0.06);
     }
+    ul{margin-left:1.2rem;}
+    li{margin-bottom:0.25rem;}
     .pub-list li{
       margin-bottom:0.6rem;
       font-size:0.9rem;
@@ -134,28 +135,28 @@
     .year-badge{
       display:inline-block;
       font-size:0.75rem;
-      padding:0.1rem 0.f4rem;
+      padding:0.1rem 0.45rem;
       border-radius:999px;
       background:var(--primary);
       color:#fff;
-      margin-right:0.3rem;
+      margin-right:0.35rem;
+    }
+    .pill{
+      display:inline-block;
+      font-size:0.8rem;
+      padding:0.1rem 0.4rem;
+      border-radius:999px;
+      background:#eef;
+      color:#223;
+      margin-left:0.25rem;
     }
     .contact-grid{
       display:grid;
       grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
-      gap:1.5rem;
-    }
-    .badge{
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      padding:0.15rem 0.5rem;
-      border-radius:999px;
-      font-size:0.75rem;
-      margin-left:0.3rem;
+      gap:1.4rem;
     }
     footer{
-      background:#111c40;
+      background:#0c1538;
       color:#eee;
       text-align:center;
       padding:1rem;
@@ -178,19 +179,21 @@
     <div class="logo-title">Pr. Mhamed Sayyouri</div>
     <nav>
       <ul>
-        <li><a href="#apropos">Accueil</a></li>
-        <li><a href="#interets">Recherche</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#encadrement">Encadrement</a></li>
-        <li><a href="#services">Services scientifiques</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#apropos">🏠 Accueil</a></li>
+        <li><a href="#recherche">🔬 Recherche</a></li>
+        <li><a href="#articles">📄 Articles</a></li>
+        <li><a href="#conferences">🎤 Conférences</a></li>
+        <li><a href="#enseignement">🧑‍🏫 Enseignement</a></li>
+        <li><a href="#etudiants">🎓 Espace étudiants</a></li>
+        <li><a href="#encadrement">👨‍🎓 Encadrement</a></li>
+        <li><a href="#contact">📬 Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Section Accueil -->
+  <!-- ACCUEIL -->
   <section id="apropos">
     <div class="hero">
       <div>
@@ -202,197 +205,214 @@
            <strong>École Nationale des Sciences Appliquées de Fès</strong>, Université Sidi Mohamed Ben Abdellah (USMBA).</p>
         <p>Professeur associé au laboratoire <strong>ESISA Analytica</strong>, ESISA, Fès.</p>
         <p class="tagline">
-          Traitement avancé du signal et de l’image, moments orthogonaux discrets,
-          vision par ordinateur et optimisation évolutive pour des applications médicales,
-          industrielles et embarquées.
+          Traitement du signal et de l’image, moments orthogonaux discrets,
+          vision par ordinateur, IA, optimisation et systèmes embarqués
+          pour des applications médicales et industrielles.
         </p>
         <div class="chips">
-          <span class="chip">Traitement du signal & image 2D/3D</span>
+          <span class="chip">Traitement d’images 2D/3D</span>
           <span class="chip">Vision par ordinateur</span>
           <span class="chip">IA & apprentissage automatique</span>
-          <span class="chip">Optimisation & métaheuristiques</span>
-          <span class="chip">Sécurité multimédia</span>
+          <span class="chip">Optimisation chaotique</span>
           <span class="chip">Systèmes embarqués</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section Intérêts & compétences -->
-  <section id="interets">
-    <h2>Axes de recherche & compétences</h2>
+  <!-- RECHERCHE -->
+  <section id="recherche">
+    <h2>🔬 Axes de recherche</h2>
     <div class="two-cols">
       <div class="card">
-        <h3>Axes de recherche</h3>
+        <h3>Intérêts scientifiques</h3>
         <ul>
-          <li>Analyse et reconstruction de signaux et d’images par <strong>moments orthogonaux discrets</strong>.</li>
-          <li>Vision par ordinateur / vision industrielle pour la reconnaissance de formes et le contrôle robotique.</li>
-          <li>Sécurisation des données médicales : <strong>compression – cryptage – tatouage/zero-watermarking</strong>.</li>
-          <li>Algorithmes d’optimisation évolutive et chaotiques pour problèmes d’ingénierie réels.</li>
-          <li>Implémentation sur systèmes embarqués (FPGA, cartes embarquées, clusters Raspberry, IoT).</li>
+          <li>Analyse, reconstruction et compression par <strong>moments orthogonaux discrets</strong>.</li>
+          <li>Vision industrielle et asservissement visuel de robots.</li>
+          <li>Sécurisation des données médicales (tatouage, chiffrement, stéganographie).</li>
+          <li>Algorithmes d’optimisation métaheuristiques et chaotiques.</li>
+          <li>Implémentation sur FPGA, cartes embarquées et clusters Raspberry Pi.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Compétences principales</h3>
+        <h3>Compétences & expertise</h3>
         <ul>
-          <li>Computer vision, traitement d’images 2D/3D/vidéo.</li>
-          <li>IA, apprentissage automatique, science des données.</li>
-          <li>Recherche opérationnelle et optimisation numérique.</li>
+          <li>Computer Vision & traitement d’images 2D/3D/vidéo.</li>
+          <li>IA, apprentissage automatique, data science.</li>
+          <li>Recherche opérationnelle, files d’attente, optimisation.</li>
+          <li>Systèmes d’information, bases de données.</li>
           <li>Conception et modélisation de systèmes industriels.</li>
-          <li>Analyse et conception de systèmes d’information, bases de données.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Section Publications -->
-  <section id="publications">
-    <h2>Sélection de publications récentes</h2>
-    <p>
-      (Sélection courte – la liste complète des plus de 140 publications est disponible sur vos profils
-      Scopus, ResearchGate, ORCID et DBLP.)
-    </p>
+  <!-- ARTICLES -->
+  <section id="articles">
+    <h2>📄 Articles dans des revues internationales</h2>
+    <p>Sélection de publications (parmi plus de 140 articles internationaux).</p>
     <ul class="pub-list">
       <li>
         <span class="year-badge">2025</span>
-        Kmich, M., Harrade, I., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
-        «&nbsp;Image Registration Using the Arithmetic Optimization Algorithm for Robotic Visual Servoing&nbsp;»,
-        <span class="pub-venue">International Journal of Computational Intelligence Systems</span>.
-      </li>
-      <li>
-        <span class="year-badge">2025</span>
-        Kmich, M., El Ghouate, N., Bencherqui, A., <strong>Sayyouri, M.</strong>, et al.,
-        «&nbsp;Chaotic Puma Optimizer Algorithm for controlling wheeled mobile robots&nbsp;»,
-        <span class="pub-venue">Engineering Science and Technology, an International Journal</span>.
+        Kmich, M., Harrade, I., Karmouni, H., <strong>Sayyouri, M.</strong>, et al. –
+        Méthode d’enregistrement d’images pour l’asservissement visuel de robots basée sur un algorithme d’optimisation.<br>
+        <span class="pub-venue">International Journal of Computational Intelligence Systems</span>
+        <span class="pill">Vision par ordinateur</span>
       </li>
       <li>
         <span class="year-badge">2024</span>
-        Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
-        «&nbsp;An improved reversible watermarking scheme using embedding optimization and quaternion moments&nbsp;»,
-        <span class="pub-venue">Scientific Reports</span>.
+        Tahiri, M. A., Boudaaoua, B., Karmouni, H., <strong>Sayyouri, M.</strong>, et al. –
+        Moments octonions pour la classification stéréo avec apprentissage profond.<br>
+        <span class="pub-venue">Complex & Intelligent Systems</span>
+        <span class="pill">Moments & Deep Learning</span>
       </li>
       <li>
         <span class="year-badge">2024</span>
-        Bencherqui, A., Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
-        «&nbsp;Chaos-enhanced Archimedes algorithm for global optimization of real-world engineering problems and signal feature extraction&nbsp;»,
-        <span class="pub-venue">Processes</span>.
+        Bencherqui, A., Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al. –
+        Algorithme d’Archimède chaotique pour l’optimisation globale et l’extraction de caractéristiques de signaux.<br>
+        <span class="pub-venue">Processes</span>
+        <span class="pill">Optimisation chaotique</span>
       </li>
       <li>
         <span class="year-badge">2024</span>
-        Bencherqui, A., Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
-        «&nbsp;Optimal algorithm for color medical encryption and compression images based on DNA coding and a hyperchaotic system in the moments&nbsp;»,
-        <span class="pub-venue">Engineering Science and Technology, an International Journal</span>.
-      </li>
-      <li>
-        <span class="year-badge">2023</span>
-        Yamni, M., Daoui, A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al.,
-        «&nbsp;Copyright protection of multiple CT images using Octonion Krawtchouk moments and Grey Wolf optimizer&nbsp;»,
-        <span class="pub-venue">Journal of the Franklin Institute</span>.
+        Bencherqui, A., Tahiri, M. A., Karmouni, H., <strong>Sayyouri, M.</strong>, et al. –
+        Schéma optimal de chiffrement-compression d’images médicales couleur basé sur l’ADN et un système hyperchaotique.<br>
+        <span class="pub-venue">Engineering Science and Technology, an International Journal</span>
+        <span class="pill">Sécurité d’images médicales</span>
       </li>
     </ul>
+    <p style="font-size:0.85rem;margin-top:0.5rem;">
+      Liste complète disponible sur vos profils <strong>Scopus, ResearchGate, ORCID</strong> et <strong>DBLP</strong>.
+    </p>
   </section>
 
-  <!-- Section Encadrement -->
+  <!-- CONFERENCES -->
+  <section id="conferences">
+    <h2>🎤 Conférences & communications</h2>
+    <div class="two-cols">
+      <div class="card">
+        <h3>🌍 Conférences internationales</h3>
+        <ul class="pub-list">
+          <li>
+            <span class="year-badge">2019</span>
+            O. El Ogri, H. Karmouni, M. Yamni, A. Daoui, <strong>M. Sayyouri</strong>, H. Qjidaa –
+            Moments de Charlier-Meixner pour l’analyse d’images.<br>
+            <span class="pub-venue">ESAI’19, Fès, Maroc.</span>
+          </li>
+          <li>
+            <span class="year-badge">2018</span>
+            H. Karmouni, T. Jahid, <strong>M. Sayyouri</strong>, et al. –
+            Moments de Tchebichef pour l’analyse d’images 2D/3D.<br>
+            <span class="pub-venue">AI2SD 2018, Tanger, Maroc.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🇲🇦 Communications nationales</h3>
+        <ul class="pub-list">
+          <li>
+            <span class="year-badge">2021</span>
+            A. Bencherqui, M. A. Tahiri, H. Karmouni, <strong>M. Sayyouri</strong>, et al. –
+            Optimisation de moments pour l’analyse d’images 3D.<br>
+            <span class="pub-venue">JRIL’21, Fès.</span>
+          </li>
+          <li>
+            <span class="year-badge">2021</span>
+            M. Kmich, I. Harrade, A. Daoui, H. Karmouni, <strong>M. Sayyouri</strong> –
+            Asservissement visuel de robots mobiles.<br>
+            <span class="pub-venue">JRIL’21, Fès.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENSEIGNEMENT -->
+  <section id="enseignement">
+    <h2>🧑‍🏫 Enseignement & cours</h2>
+    <div class="two-cols">
+      <div class="card">
+        <h3>Modules enseignés</h3>
+        <ul>
+          <li>Analyse et traitement d’images 2D/3D & Vision industrielle.</li>
+          <li>Intelligence artificielle et apprentissage automatique.</li>
+          <li>Optimisation & métaheuristiques, recherche opérationnelle, files d’attente.</li>
+          <li>Systèmes embarqués & temps réel.</li>
+          <li>Théorie des graphes.</li>
+          <li>Bases de données & systèmes d’information.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Supports de cours (exemples)</h3>
+        <p style="font-size:0.9rem;">
+          Placez vos polycopiés dans un dossier <code>cours/</code> du dépôt, puis liez-les ici.
+        </p>
+        <ul>
+          <li><a href="cours/IA.pdf" target="_blank">Cours Intelligence Artificielle</a></li>
+          <li><a href="cours/Vision_Image.pdf" target="_blank">Traitement d’Images & Vision</a></li>
+          <li><a href="cours/Optimisation_Metaheuristiques.pdf" target="_blank">Optimisation & Métaheuristiques</a></li>
+          <li><a href="cours/Theorie_Graphes.pdf" target="_blank">Théorie des Graphes</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPACE ETUDIANTS -->
+  <section id="etudiants">
+    <h2>🎓 Espace étudiants</h2>
+    <div class="two-cols">
+      <div class="card">
+        <h3>Ressources & documents</h3>
+        <ul>
+          <li><a href="docs/Planning_Cours.pdf" target="_blank">Planning des cours & contrôles</a></li>
+          <li><a href="docs/Consignes_Rapports.pdf" target="_blank">Consignes pour rapports, PFA & PFE</a></li>
+          <li><a href="docs/Format_Presentation.pdf" target="_blank">Format des présentations orales</a></li>
+          <li><a href="docs/Grille_Evaluation_Projet.pdf" target="_blank">Grille d’évaluation des projets</a></li>
+        </ul>
+        <p style="font-size:0.85rem;margin-top:0.5rem;">
+          (*Créer un dossier <code>docs/</code> et y ajouter vos fichiers PDF.*)
+        </p>
+      </div>
+      <div class="card">
+        <h3>TP, projets & code</h3>
+        <ul>
+          <li><a href="tp/TP_Traitement_Image_MATLAB.pdf" target="_blank">TP Traitement d’images (MATLAB)</a></li>
+          <li><a href="tp/TP_Systemes_Embarques.pdf" target="_blank">TP Systèmes embarqués & temps réel</a></li>
+          <li><a href="tp/TP_Optimisation.pdf" target="_blank">TP Optimisation & métaheuristiques</a></li>
+          <li><a href="https://github.com/mhamedsayyouri" target="_blank">Dépôts GitHub de codes et projets</a></li>
+        </ul>
+        <p style="font-size:0.85rem;margin-top:0.5rem;">
+          (*Créer un dossier <code>tp/</code> pour déposer les PDF de TP, ou bien lier directement vos dépôts GitHub.*)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENCADREMENT -->
   <section id="encadrement">
-    <h2>Encadrement de thèses</h2>
+    <h2>👨‍🎓 Encadrement de thèses</h2>
     <div class="card">
       <ul>
-        <li>H. Karmouni – <em>Algorithmes rapides et stables de calcul des moments de Charlier pour l’analyse et la classification des images 2D/3D</em>, soutenue en 2019.</li>
-        <li>T. Jahid – <em>Amélioration des algorithmes d’analyse des images 2D et 3D par les moments de Meixner</em>, 2020.</li>
-        <li>M. Yamni – <em>Analyse des signaux numériques et implémentation sur systèmes embarqués</em>, 2022.</li>
-        <li>A. Daoui – <em>Analyse optimale des signaux par transformées de moments discrets</em>, 2022.</li>
-        <li>O. El Ogri – <em>Analyse et sécurité des signaux/images/vidéos basées sur les moments fractionnaires</em>, 2022.</li>
-        <li>M. A. Tahiri – <em>Transformées moments et IA pour l’analyse et l’implémentation embarquée des signaux numériques</em>, 2023.</li>
-        <li>A. Bencherqui – <em>Analyse avancée des signaux numériques par transformées orthogonales : stabilité, optimisation et implémentation sur cartes embarquées</em>, 2024.</li>
+        <li>H. Karmouni – Moments de Charlier pour l’analyse et la classification d’images 2D/3D (2019).</li>
+        <li>T. Jahid – Moments de Meixner pour l’analyse d’images (2020).</li>
+        <li>M. Yamni – Analyse de signaux numériques et implémentation sur systèmes embarqués (2022).</li>
+        <li>A. Daoui – Analyse optimale de signaux par moments discrets (2022).</li>
+        <li>O. El Ogri – Moments fractionnaires pour la sécurité de signaux/images/vidéos (2022).</li>
+        <li>M. A. Tahiri – Moments & IA pour l’implémentation embarquée (2023).</li>
+        <li>A. Bencherqui – Transformées orthogonales, optimisation et implémentation embarquée (2024).</li>
       </ul>
     </div>
   </section>
-<section id="enseignement">
-  <h2>Enseignement & Activités pédagogiques</h2>
 
-  <div class="card">
-    <h3>Modules enseignés</h3>
-    <ul>
-      <li>Analyse et Traitement d’Images 2D/3D</li>
-      <li>Vision par Ordinateur & Vision Industrielle</li>
-      <li>Optimisation & Métaheuristiques</li>
-      <li>Théorie des Graphes</li>
-      <li>Intelligence Artificielle</li>
-      <li>Bases de Données & Systèmes d'Information</li>
-      <li>Files d’Attente & Recherche Opérationnelle</li>
-      <li>Systèmes Embarqués & Temps Réel</li>
-    </ul>
-  </div>
-
-  <br>
-
-  <div class="card">
-    <h3>Cours & Supports pédagogiques</h3>
-    <ul>
-      <li>
-        <a href="cours/IA.pdf" target="_blank">Cours Intelligence Artificielle (PDF)</a>
-      </li>
-      <li>
-        <a href="cours/vision.pdf" target="_blank">Traitement d’Images & Vision par Ordinateur</a>
-      </li>
-      <li>
-        <a href="cours/optimisation.pdf" target="_blank">Optimisation & Métaheuristiques</a>
-      </li>
-      <li>
-        <a href="cours/graphes.pdf" target="_blank">Théorie des Graphes</a>
-      </li>
-      <li>
-        <a href="cours/bd.pdf" target="_blank">Bases de Données</a>
-      </li>
-      <li>
-        <a href="cours/queues.pdf" target="_blank">Files d’Attente</a>
-      </li>
-      <li>
-        <a href="cours/embarqués.pdf" target="_blank">Systèmes Embarqués</a>
-      </li>
-    </ul>
-
-    <p style="font-size:0.85rem; margin-top:0.7rem;">
-      (*Ajoutez les fichiers PDF dans un dossier <strong>cours/</strong> dans votre dépôt GitHub.*)
-    </p>
-  </div>
-</section>
-
-
-  
-<li><a href="#enseignement">Enseignement 📘</a></li>
-  
-  <!-- Section Services -->
-  <section id="services">
-    <h2>Services scientifiques & éditoriaux</h2>
-    <div class="two-cols">
-      <div class="card">
-        <h3>Responsabilités</h3>
-        <ul>
-          <li>Membre du laboratoire <strong>LISA</strong> (Laboratoire d’Ingénierie, Systèmes et Applications).</li>
-          <li>Chef de l’équipe <strong>Automatique, Signaux et Systèmes (EASS)</strong>.</li>
-          <li>Organisation et comités scientifiques de plusieurs conférences (ICDTA, ESAI, CPI, ISCV, etc.).</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Activités éditoriales <span class="badge">Éditeur & reviewer</span></h3>
-        <ul>
-          <li>Éditeur académique : <em>International Journal of Digital Multimedia Broadcasting</em>, <em>Advances in Mathematical Physics</em>, <em>The Scientific World Journal</em>.</li>
-          <li>Relecteur pour de nombreuses revues (IEEE Transactions on Image Processing, Pattern Recognition, Expert Systems with Applications, Signal Processing, Sensors, Applied Sciences, etc.).</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Contact -->
+  <!-- CONTACT -->
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>📬 Contact</h2>
     <div class="contact-grid">
       <div class="card">
         <h3>Coordonnées</h3>
         <p><strong>ENSA Fès – Université Sidi Mohamed Ben Abdellah</strong></p>
         <p>BP 72, Avenue My Abdallah km 5, Route d’Imouzzer<br>Fès, Maroc</p>
-        <p>Tél. : +212 6 62 22 46 55 &nbsp; / &nbsp; +212 5 35 61 91 44</p>
+        <p>Tél. : +212 6 62 22 46 55 &nbsp;/&nbsp; +212 5 35 61 91 44</p>
         <p>Email : <a href="mailto:mhamed.sayyouri@usmba.ac.ma">mhamed.sayyouri@usmba.ac.ma</a></p>
       </div>
       <div class="card">
@@ -404,7 +424,7 @@
           <li>DBLP</li>
         </ul>
         <p style="font-size:0.85rem;margin-top:0.4rem;">
-          (Ajouter ici les liens cliquables vers vos profils.)
+          (Remplacez par des liens directs vers vos profils.)
         </p>
       </div>
     </div>
@@ -420,4 +440,3 @@
 </script>
 </body>
 </html>
-
