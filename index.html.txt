@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pr. Mhamed SAYYOURI – Site personnel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Site personnel de Pr. Mhamed Sayyouri : recherches scientifiques, publications, enseignement et ressources pour étudiants.">
+  <style>
+    :root {
+      --primary: #004c7f;
+      --primary-light: #e6f0f7;
+      --accent: #9c27b0;
+      --bg: #f5f7fb;
+      --text: #222;
+      --muted: #666;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --radius: 12px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Barre de navigation */
+    header {
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.7rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      padding: 0.25rem 0.4rem;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      background: var(--primary-light);
+      text-decoration: none;
+    }
+
+    /* Conteneur principal */
+    main {
+      max-width: var(--max-width);
+      margin: 1.5rem auto 2rem;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.6rem;
+    }
+
+    /* Section présentation */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff, var(--primary-light));
+      border-radius: 20px;
+      padding: 1.8rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: 0.98rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-tags {
+      margin-top: 0.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      background: #ffffff;
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border: 1px solid #dde3ee;
+    }
+
+    .hero-photo-wrapper {
+      text-align: center;
+    }
+
+    .hero-photo {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 4px solid #ffffff;
+    }
+
+    .hero-links {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-links a {
+      margin-right: 0.6rem;
+    }
+
+    /* Cartes génériques */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow);
+      font-size: 0.95rem;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: var(--primary);
+    }
+
+    .card small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-top: 0.3rem;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.clean li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Tableau simple */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #ffffff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    th, td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #e0e4ef;
+      text-align: left;
+    }
+
+    th {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Galerie d'événements */
+    .gallery {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      object-fit: cover;
+    }
+
+    /* Pied de page */
+    footer {
+      background: #ffffff;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid #dde3ee;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo-wrapper {
+        order: -1;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="brand">Pr. Mhamed SAYYOURI</div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#recherche">Recherche</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#enseignement">Enseignement</a></li>
+        <li><a href="#etudiants">Espace étudiants</a></li>
+        <li><a href="#events">Événements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ACCUEIL / PROFIL -->
+  <section id="accueil">
+    <div class="hero">
+      <div>
+        <h1>Pr. Mhamed SAYYOURI</h1>
+        <div class="hero-subtitle">
+          Professeur Habilité – ENSA Fès<br>
+          Coordonnateur de la filière Génie Mécatronique<br>
+          Laboratoire LISA – Université Sidi Mohamed Ben Abdellah
+        </div>
+        <p>
+          Mes travaux portent sur le traitement avancé des signaux et des images, la vision par
+          ordinateur, l’intelligence artificielle, l’optimisation évolutive et la sécurité multimédia.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Traitement du signal / image</span>
+          <span class="tag">Vision par ordinateur</span>
+          <span class="tag">IA & Machine Learning</span>
+          <span class="tag">Optimisation métaheuristique</span>
+          <span class="tag">Systèmes embarqués</span>
+        </div>
+
+        <div class="hero-links">
+          <a href="CV_Mhamed_Sayyouri.pdf" target="_blank">Télécharger le CV</a> ·
+          <a href="https://www.scopus.com" target="_blank">Scopus</a> ·
+          <a href="https://www.researchgate.net" target="_blank">ResearchGate</a> ·
+          <a href="https://orcid.org" target="_blank">ORCID</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrapper">
+        <img src="photo-sayyouri.jpg" alt="Photo de Pr. Mhamed Sayyouri" class="hero-photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- RECHERCHE -->
+  <section id="recherche">
+    <h2 class="section-title">Axes de recherche</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Traitement de signal et d’images 2D/3D</h3>
+        <p>Moments orthogonaux, transformées, reconstruction et traitement robuste.</p>
+      </div>
+
+      <div class="card">
+        <h3>Vision par ordinateur</h3>
+        <p>Analyse de formes, détection, description et systèmes intelligents.</p>
+      </div>
+
+      <div class="card">
+        <h3>IA & Apprentissage automatique</h3>
+        <p>Classification, extraction de caractéristiques, applications santé & industrie.</p>
+      </div>
+
+      <div class="card">
+        <h3>Métaheuristiques</h3>
+        <p>Conception d’algorithmes d’optimisation avancés et hybrides.</p>
+      </div>
+
+      <div class="card">
+        <h3>Sécurité multimédia</h3>
+        <p>Tatouage, stéganographie, zero-watermarking d’images médicales.</p>
+      </div>
+
+      <div class="card">
+        <h3>Systèmes embarqués</h3>
+        <p>Implémentation FPGA & microcontrôleurs pour le traitement temps réel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2 class="section-title">Publications</h2>
+
+    <ul class="clean">
+      <li>• Kmich et al., <em>Image Registration Using AOA for Visual Servoing</em>, IJCI Systems, 2025.</li>
+      <li>• Kmich et al., <em>Chaotic Puma Optimizer</em>, EST Journal, 2025.</li>
+    </ul>
+  </section>
+
+  <!-- ENSEIGNEMENT -->
+  <section id="enseignement">
+    <h2 class="section-title">Enseignement & cours</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Analyse de données</h3>
+        <a href="Cours analyse de données.pdf" class="pill">PDF</a>
+      </div>
+
+      <div class="card">
+        <h3>ACSI</h3>
+        <a href="Cours ACSI.pdf" class="pill">PDF</a>
+      </div>
+
+      <div class="card">
+        <h3>BD & SGBD</h3>
+        <a href="Cours BD & SGBD.pdf" class="pill">PDF</a>
+      </div>
+
+      <div class="card">
+        <h3>Théorie des graphes</h3>
+        <a href="Cours theorie des graphes.pdf" class="pill">PDF</a>
+      </div>
+
+      <div class="card">
+        <h3>Files d’attente</h3>
+        <a href="Files d attente.pdf" class="pill">PDF</a>
+      </div>
+
+      <div class="card">
+        <h3>Optimisation</h3>
+        <a href="Optimisation.pdf" class="pill">PDF</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ETUDIANTS -->
+  <section id="etudiants">
+    <h2 class="section-title">Espace étudiants</h2>
+
+    <table>
+      <tr><th>Ressource</th><th>Description</th></tr>
+      <tr><td>Mini-projets</td><td>Projets en vision industrielle, IA, optimisation.</td></tr>
+      <tr><td>PFE / stages</td><td>Consignes, rapports, soutenances.</td></tr>
+    </table>
+  </section>
+
+  <!-- EVENEMENTS -->
+  <section id="events">
+    <h2 class="section-title">Événements & Conférences</h2>
+    <p>Moments forts des journées scientifiques à l’ENSA Fès.</p>
+
+    <div class="gallery">
+      <img src="IMG_0316.JPG" alt="Conférence ENSA Fès">
+      <img src="IMG_0464.JPG" alt="Photo de groupe ENSA Fès">
+      <img src="IMG_3120.JPG" alt="Événement ENSA Fès">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <p>
+      ENSA Fès — USMBA<br>
+      BP 72, Route d’Imouzzer, Fès – Maroc<br>
+      Email : <a href="mailto:mhamed.sayyouri@usmba.ac.ma">mhamed.sayyouri@usmba.ac.ma</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Pr. Mhamed SAYYOURI – ENSA Fès.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
